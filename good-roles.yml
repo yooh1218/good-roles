@@ -1,0 +1,20 @@
+---
+
+- name: deploy haproxy
+  hosts: frontends
+  roles:
+    - role: repo-config
+    - role: lb-tier
+
+- name: deploy tomcat
+  hosts: apps
+  roles:
+    - role: repo-config
+    - role: app-tier
+
+- name: deploy postgres
+  hosts: appdbs
+  roles:
+    - role: repo-config
+#    - role: db-tier
+    - role: geerlingguy.postgresql
