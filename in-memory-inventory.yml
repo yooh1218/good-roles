@@ -7,8 +7,8 @@
   - name: Fetch Instance Info
 #    os_server_info:
     os_server_facts:
-#      cloud: openstack
-      cloud: ospcloud
+      cloud: openstack
+#      cloud: ospcloud
     register: result
 
   - name: Add host
