@@ -7,7 +7,7 @@
   - name: Fetch Instance Info
 #    os_server_info:
     os_server_facts:
-      cloud: openstack
+      clouds: openstack
 #      cloud: ospcloud
     register: result
 
